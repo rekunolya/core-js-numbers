@@ -35,6 +35,8 @@ function getRectangleArea(width, height) {
  */
 function getCircleCircumference(/* radius */) {
   throw new Error('Not implemented');
+  // const circumference = 2 * 3.1415926535897932 * radius;
+  // return circumference;
 }
 
 /**
@@ -49,8 +51,15 @@ function getCircleCircumference(/* radius */) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function getAverage(value1, value2) {
+  const sum = value1 + value2;
+  let average = 0;
+  if (!Number.isFinite(sum)) {
+    average = value1 / 2 + value2 / 2;
+  } else {
+    average = sum / 2;
+  }
+  return average;
 }
 
 /**
