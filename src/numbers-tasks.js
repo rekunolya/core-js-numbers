@@ -296,7 +296,6 @@ function getFibonacciNumber(/* index */) {
  *   1  => 1
  */
 function getSumToN(n) {
-  // throw new Error('Not implemented');
   let sum = 0;
   for (let i = 1; i <= n; i += 1) {
     sum += i;
@@ -349,8 +348,8 @@ function isPowerOfTwo(/* num */) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(/* num */) {
-  throw new Error('Not implemented');
+function getSine(num) {
+  return Math.sin(num);
 }
 
 /**
