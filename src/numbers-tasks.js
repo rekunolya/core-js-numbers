@@ -51,14 +51,7 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  const sum = value1 + value2;
-  let average = 0;
-  if (!Number.isFinite(sum)) {
-    average = value1 / 2 + value2 / 2;
-  } else {
-    average = sum / 2;
-  }
-  return average;
+  return value1 / 2 + value2 / 2;
 }
 
 /**
@@ -280,8 +273,20 @@ function getCube(num) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
+function getFibonacciNumber(index) {
+  if (index === 0) return 0;
+  if (index === 1) return 1;
+
+  let a = 0;
+  let b = 1;
+  let fib = 0;
+
+  for (let i = 2; i <= index; i += 1) {
+    fib = a + b;
+    a = b;
+    b = fib;
+  }
+  return fib;
 }
 
 /**
